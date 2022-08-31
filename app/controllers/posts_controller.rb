@@ -1,17 +1,17 @@
 class PostsController < ApplicationController
     def index
         @posts = Post.all
-        @message = "Witam"
     end
   
-    def created
+    def create
     end
   
     def new
+        @post = Post.new 
     end
   
     def show 
-        
+        @post = Post.find(params[:title, :body])
     end
   
     def update
